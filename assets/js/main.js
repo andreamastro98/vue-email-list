@@ -4,7 +4,7 @@ const { createApp } = Vue
     data() {
       return {
         //variabili vue 3
-        message: 'Hello Vue!',
+        randomMail: []
       }
     },
     methods: {
@@ -13,8 +13,7 @@ const { createApp } = Vue
 
         axios.get(`https://flynn.boolean.careers/exercises/api/random/mail`)
          .then( (res) => {
-            console.log( res.data.forms[0].name )
-            // this.numRand = res.data
+            this.randomMail.push(res.data.response)
         } )
     }
         
