@@ -18,7 +18,7 @@
             <ul>
                 <li v-for="( elem, index ) in randomMail"
                 :key="index"
-                v-if="randomMail.length === 10">{{elem}}</li>
+                v-if="randomMail.length >= 10">{{elem}}</li>
             </ul>            
         </div>
         <button @click="attivaApi">Stampa Mail randomica</button>
